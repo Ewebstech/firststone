@@ -1,1 +1,1 @@
-<?php echo"logged in"; ?>
+<?php echo Auth::user()->content; ?>

@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Validator;
+use Auth;
+
+class AdminController extends Controller
+{
+    public function index()
+    {
+       return view('admin/index');
+    }
+
+    public function CheckLogin(Request $request)
+    {
+        
+        $this->validate($request, [
+            'username'    => 'required|min:3',
+            'password'  => 'required|alphaNum|min:3'
+        ]);
+
+        $user_data = array(
+            'username'    => $request->get('username'),
+            'password' => $request->get('password')
+
+        );
+
+        if(Auth::attempt($user_data)){
+            return redirect('/dashboard');
+        }
+        else{
+            return back()->with('error', 'Wrong Login Details');
+        }
+    } 
+
+    function SuccessLogin(){
+        return view('admin/dashboard');
+    }
+
+    function Logout(){
+        Auth::logout();
+        return redirect('login');
+    }
+
+}

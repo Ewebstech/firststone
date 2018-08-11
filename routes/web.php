@@ -22,12 +22,16 @@ Route::get('/', function () {
  * Admin Routes
  */
 
-// Route to show the login form
-Route::get('/login', 'AdminController@index');
+$AdminRoute = Route::prefix('f-admin')->group(function () {
+    $this->get('', 'AdminController@index');
+    $this->post('/login', 'AdminController@checklogin')->name('login');
+    $this->get('/dashboard', 'AdminController@successlogin')->name('dashboard');
+    $this->get('/logout', 'AdminController@logout')->name('logout');
+    $this->get('/add-projects', function () {
+        return view('admin/addprojects');
+    })->name('add-p');
+    $this->post('/postdata', 'FormController@store')->name('createproject');
+});
 
-// route to process the form
-Route::post('/user/login', 'AdminController@checklogin')->name('login');
 
-Route::get('/dashboard', 'AdminController@successlogin');
 
-Route::get('/logout', 'AdminController@logout');

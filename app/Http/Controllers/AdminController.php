@@ -28,7 +28,7 @@ class AdminController extends Controller
         );
 
         if(Auth::attempt($user_data)){
-            return redirect('/dashboard');
+            return redirect('/f-admin/dashboard');
         }
         else{
             return back()->with('error', 'Wrong Login Details');
@@ -41,7 +41,7 @@ class AdminController extends Controller
 
     function Logout(){
         Auth::logout();
-        return redirect('login');
+        return redirect('/f-admin');
     }
 
 }

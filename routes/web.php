@@ -13,10 +13,9 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (){
     return view('baselayout');
 });
-
 
 /**
  * Admin Routes
@@ -32,6 +31,8 @@ $AdminRoute = Route::prefix('f-admin')->group(function () {
     })->name('add-p');
     $this->post('/postdata', 'FormController@store')->name('createproject');
 });
+
+//$SiteRoute = Route::
 
 
 

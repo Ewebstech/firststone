@@ -67,7 +67,7 @@ function submit_form(fid, page, contid, reload, cb, xdata) {
         var data = jsonObj.data;
         container.html(data);
         if (status == "success") {
-           AutoRefresh(800);
+           //AutoRefresh(800);
         }
       }
     }
@@ -103,7 +103,7 @@ function submit_form_with_file(fid, page, contid, reload, cb, xdata) {
       var response = xmlHttp.responseText;
         var data = response;
         container.html(data);
-          AutoRefresh(800);
+          //AutoRefresh(800);
     }
   };
   xmlHttp.send(formData);

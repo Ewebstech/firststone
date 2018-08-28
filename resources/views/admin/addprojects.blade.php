@@ -38,7 +38,7 @@
                             <h2>Add to Project Listings for Sponsoring</h2>
                         </header>
                         <section>
-                            <form class="form has-validation" id="projectForm">
+                            <form class="form has-validation" id="projectForm" enctype="multipart/form-data">
                                     @csrf
                                 <p>
                                 <div class="clearfix">
@@ -81,7 +81,7 @@
 
                                 <div class="clearfix">
 
-                                    <label for="form-username" class="form-label">Mininum Yield Target <em>*</em><small>In Figures(Numeric)</label>
+                                    <label for="form-username" class="form-label">Mininum Yield Target <em>*</em><small>Min Returns (percentage)</label>
                                     <div class="form-input"><input type="text" id="project[yieldtarget]" name="project[yieldtarget]" required="required" /></div>
 
                                 </div>
@@ -92,6 +92,13 @@
                                     <div class="form-input"><textarea id="project[address]" name="project[address]" required="required"></textarea></div>
 
                                 </div>
+                                <div class="clearfix">
+
+                                <label for="form-username" class="form-label">Upload Cover Image <em>*</em></label>
+                                <div class="form-input"><input type="file" name="image_name" class="form-control" id="image_name" value=""></div>
+
+                                </div>
+                                
                                 <div id="data-msg"></div>
                                 <div class="form-action clearfix">
 
@@ -116,7 +123,7 @@
     $("#projectForm").submit(function(e){
         
         e.preventDefault();
-        submit_form("projectForm", "{{ route('createproject') }}", "data-msg", false);
+        submit_form_with_file("projectForm", "{{ route('createproject') }}", "data-msg");
     })
 </script>
 </body>

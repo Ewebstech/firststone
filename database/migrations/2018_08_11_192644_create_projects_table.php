@@ -15,13 +15,9 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('dealsize');
-            $table->string('dealunit');
-            $table->string('amount');
-            $table->string('yieldtarget');
-            $table->text('address');
             $table->string('status');
             $table->string('type');
+            $table->text('content');
             $table->timestamps();
         });
     }

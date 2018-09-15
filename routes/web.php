@@ -16,6 +16,14 @@ use App\Http\Controllers\AdminController;
 Route::get('/', function (){
     return view('baselayout');
 });
+// Blank Page
+Route::get('/blank', function (){
+    return view('blank');
+});
+//About Page
+Route::get('/about', function (){
+    return view('about');
+});
 
 /**
  * Admin Routes

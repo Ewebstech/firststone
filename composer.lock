@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcf9b1e26a9febed0c6ee2c08d3eb823",
+    "content-hash": "78182c78e03c008dd9fa5d5fecc5fb09",
     "packages": [
         {
             "name": "cloudinary/cloudinary_php",
@@ -507,16 +507,16 @@
         },
         {
             "name": "jrm2k6/cloudder",
-            "version": "0.4.0",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jrm2k6/cloudder.git",
-                "reference": "82d75368890424d166bf025df39611a1d18abcc0"
+                "reference": "a69d49fc483bc45d58db4f3ca23d6e54f944b98e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jrm2k6/cloudder/zipball/82d75368890424d166bf025df39611a1d18abcc0",
-                "reference": "82d75368890424d166bf025df39611a1d18abcc0",
+                "url": "https://api.github.com/repos/jrm2k6/cloudder/zipball/a69d49fc483bc45d58db4f3ca23d6e54f944b98e",
+                "reference": "a69d49fc483bc45d58db4f3ca23d6e54f944b98e",
                 "shasum": ""
             },
             "require": {
@@ -529,6 +529,16 @@
                 "phpunit/phpunit": "4.*"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JD\\Cloudder\\CloudderServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cloudder": "JD\\Cloudder\\Facades\\Cloudder"
+                    }
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "JD\\Cloudder": "src/"
@@ -554,7 +564,7 @@
                 "laravel4",
                 "upload"
             ],
-            "time": "2017-02-03T19:10:37+00:00"
+            "time": "2018-05-08T00:22:05+00:00"
         },
         {
             "name": "laravel/framework",

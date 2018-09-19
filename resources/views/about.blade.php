@@ -25,8 +25,8 @@
             <div class="page-title-container bg-image bg-cover bg-pattern" style="max-height: 100px;">
                 <div class="page-title">
                     <div class="container">
-                        <h1>Blank Page</h1>
-                        <h4>Pages / Blank</h4>
+                        <h1>About Us</h1>
+                        <h4>Pages / About</h4>
                     </div>
                 </div>
             </div>
@@ -37,107 +37,46 @@
             <div class="section-content">
                 <div class="container">
                     <article class="onscroll-animate" data-animation="fadeInRight">
-                        <div class="profile-full">
+                        <center>
+                        <div class="profile-full" style="max-width: 700px;">
                             <div class="row flex">
-                                <div class="col-md-3 profile-full-photo">
-                                    <img alt="Mission" src="/storage/images/mission.PNG">
+                                <div class="col-md-5 profile-full-photo">
+                                    <img alt="Mission" src="/storage/images/mission.PNG" style="padding: 10px; mmargin-top: -30px; text-align: center;">
                                 </div>
-                                <div class="col-md-9">
-                                    <div class="profile-full-content">
+                                <div class="col-md-7">
+                                    <div class="profile-full-content" style="margin-top: 30px;">
                                         <h1>Our Mission</h1>
                                         
-                                        <p>Some were thickly set with glittering teeth resembling ivory saws; others were tufted with knots of human hair, and one was sickle-shaped, with a vast handle sweeping round like the segment made in the new-mown grass by a long-armed mower. You shuddered as you gazed, and wondered what monstrous cannibal and savage could ever have gone a death-harvesting with such a hacking</p>
-                                        <div class="profile-full-info">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <i class="fa fa-phone"></i> 0 800 50 555 123<br>
-                                                    <i class="fa fa-envelope-alt"></i> <a href="#">malik.barore@hometastic.com</a><br>
-                                                    <i class="fa fa-money"></i> 88 Sales done
-                                                </div>
-                                                <div class="col-md-6 text-right">
-                                                    <div class="profile-socials-container">
-                                                        <a href="#" class="profile-social"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-google-plus"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-linkedin"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-dribbble"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- .profile-full-info -->
+                                        <p style="text-align: left;">Our mission is to use our technology platform to reach an increasing number of people with increasing quantity of real estate deals that are satisfactorily beneficial.</p>
+                                       
                                     </div><!-- .profile-full-content -->
                                 </div><!-- .col-md-9 -->
                             </div><!-- .row -->
                         </div><!-- .profile-full -->
+                        </center>
                     </article>
-                    <article class="onscroll-animate" data-animation="fadeInRight" data-delay="300">
-                        <div class="profile-full">
-                            <div class="row flex">
-                                <div class="col-md-3 profile-full-photo">
-                                    <img alt="profile photo" src="images/agents/6.jpg">
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="profile-full-content">
-                                        <h1>Hansom Rob</h1>
-                                        <h4>property expert</h4>
-                                        <p>Some were thickly set with glittering teeth resembling ivory saws; others were tufted with knots of human hair, and one was sickle-shaped, with a vast handle sweeping round like the segment made in the new-mown grass by a long-armed mower. You shuddered as you gazed, and wondered what monstrous cannibal and savage could ever have gone a death-harvesting with such a hacking</p>
-                                        <div class="profile-full-info">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <i class="fa fa-phone"></i> 0 800 50 555 123<br>
-                                                    <i class="fa fa-envelope-alt"></i> <a href="#">malik.barore@hometastic.com</a><br>
-                                                    <i class="fa fa-money"></i> 88 Sales done
-                                                </div>
-                                                <div class="col-md-6 text-right">
-                                                    <div class="profile-socials-container">
-                                                        <a href="#" class="profile-social"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-google-plus"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-linkedin"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-dribbble"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- .profile-full-info -->
-                                    </div><!-- .profile-full-content -->
-                                </div><!-- .col-md-9 -->
-                            </div><!-- .row -->
-                        </div><!-- .profile-full -->
-                    </article>
-                    <article class="onscroll-animate" data-animation="fadeInRight" data-delay="400">
-                        <div class="profile-full">
-                            <div class="row flex">
-                                <div class="col-md-3 profile-full-photo">
-                                    <img alt="profile photo" src="images/agents/7.jpg">
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="profile-full-content">
-                                        <h1>Malik Barrymore</h1>
-                                        <h4>property expert</h4>
-                                        <p>Some were thickly set with glittering teeth resembling ivory saws; others were tufted with knots of human hair, and one was sickle-shaped, with a vast handle sweeping round like the segment made in the new-mown grass by a long-armed mower. You shuddered as you gazed, and wondered what monstrous cannibal and savage could ever have gone a death-harvesting with such a hacking</p>
-                                        <div class="profile-full-info">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <i class="fa fa-phone"></i> 0 800 50 555 123<br>
-                                                    <i class="fa fa-envelope-alt"></i> <a href="#">malik.barore@hometastic.com</a><br>
-                                                    <i class="fa fa-money"></i> 88 Sales done
-                                                </div>
-                                                <div class="col-md-6 text-right">
-                                                    <div class="profile-socials-container">
-                                                        <a href="#" class="profile-social"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-google-plus"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-linkedin"></i></a>
-                                                        <a href="#" class="profile-social"><i class="fa fa-dribbble"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- .profile-full-info -->
-                                    </div><!-- .profile-full-content -->
-                                </div><!-- .col-md-9 -->
-                            </div><!-- .row -->
-                        </div><!-- .profile-full -->
-                    </article>
+
+                    <article class="onscroll-animate" data-animation="fadeInRight">
+                            <center>
+                            <div class="profile-full" style="max-width: 700px;">
+                                <div class="row flex">
+                                    <div class="col-md-5 profile-full-photo">
+                                        <img alt="Mission" src="/storage/images/vision.png" style="padding: 10px; mmargin-top: -30px; text-align: center;">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="profile-full-content" style="margin-top: 30px;">
+                                            <h1>Our Vision</h1>
+                                            
+                                            <p style="text-align: left;">Our vision is to have developed over 100 Africa real estate portfolio for over 2000 people and become the most preferred real estate investment platform in Africa by 2030</p>
+                                           
+                                        </div><!-- .profile-full-content -->
+                                    </div><!-- .col-md-9 -->
+                                </div><!-- .row -->
+                            </div><!-- .profile-full -->
+                            </center>
+                        </article>
+                
+            
                 </div><!-- .container -->
                </div><!-- .section-content -->
           </section>

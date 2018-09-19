@@ -19,6 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('type');
             $table->text('content');
             $table->timestamps();
+            
         });
     }
 

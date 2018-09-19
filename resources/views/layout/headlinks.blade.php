@@ -118,5 +118,12 @@
 	.theme-setting.active {
 		border-color: #B1B1B1;
 	}
+	/* LIST #2 */
+
+	#list2 ol { font-style: italic; font-family: Georgia, Times, serif; font-size:24px; color:#fff; }
+	#list2 ol li { padding:8px; font-style:normal; font-family:Arial; font-size:13px; color:#000; border-left: 1px solid #999; }
+	 #list2 ol li em { display:block; } 
 	</style>
+
+
 </head>

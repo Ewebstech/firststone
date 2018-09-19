@@ -10,7 +10,7 @@
         </div>
         <div class="pull-right">
             <div class="site-top-item">
-                <a href="#"><i class="fa fa-user"></i> Log in</a>
+                <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user"></i> Log in</a>
             </div>
             <div class="site-top-item">
                 <a href="#"><i class="fa fa-pencil"></i> Sign in</a>
@@ -31,12 +31,12 @@
         <div class="menu-button"><i class="fa fa-reorder"></i></div>
         <nav class="menu-container underscore-container menu-container-fade">
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="property_listings.html">About</a></li>
-                <li><a href="agents.html">Investment</a>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="#">Our Services</a>
                     <ul>
-                        <li><a href="#">Land Investment</a></li>
-                        <li><a href="#">Development Investment</a></li>
+                        <li><a href="/services/land">Land Investment</a></li>
+                        <li><a href="/services/dev">Development Investment</a></li>
                         
                     </ul>
                 </li>
@@ -47,10 +47,11 @@
                         
                     </ul>
                 </li>
-                <li><a href="gallery.html">Contact Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
                 
             </ul>
             <div class="underscore"><div class="underscore-inner"></div></div>
         </nav>
     </div><!-- .container -->
 </div><!-- .main-menu -->
+@include('modals.login')

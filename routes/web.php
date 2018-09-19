@@ -25,6 +25,19 @@ Route::get('/about', function (){
     return view('about');
 });
 
+Route::prefix('services')->group(function () {
+    $this->get('/land', function () {
+        return view('land-investments');
+    });
+    $this->get('/dev', function () {
+        return view('dev-investments');
+    });
+});
+//About Page
+Route::get('/contact', function (){
+    return view('contact');
+});
+
 /**
  * Admin Routes
  */

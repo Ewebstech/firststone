@@ -34,7 +34,6 @@ class FormController extends Controller
         $project->type = $data['type'];
         
 		if($project->save()){
-            
             $output['success'] = "<center style='font-size: 13px;'><div class='col-md-6 alert alert-success text-center'>Data Upload Successful</div></center>";
             return $output['success'];
         } else {

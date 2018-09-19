@@ -12,4 +12,6 @@ class UserController extends Controller
     public function isAdmin()    {        
         return $this->type === self::ADMIN_TYPE;    
     }
+
+    
 }

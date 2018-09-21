@@ -7,13 +7,16 @@
             <span class="site-top-item">
                 <i class="fa fa-phone"></i> +234 800 000 0000
             </span>
+            <span class="site-top-item">
+                &reg; <b>RC:</b> 1518397
+            </span>
         </div>
         <div class="pull-right">
             <div class="site-top-item">
                 <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user"></i> Log in</a>
             </div>
             <div class="site-top-item">
-                <a href="#"><i class="fa fa-pencil"></i> Sign in</a>
+                <a href="#" data-toggle="modal" data-target="#regModal"><i class="fa fa-pencil"></i> Sign Up</a>
             </div>
             <div class="site-top-item">
                 <form id="form-top-search">
@@ -27,7 +30,7 @@
 </div><!-- .site-top -->
 <div class="main-menu">
     <div class="container">
-        <img class="pull-left main-logo" alt="hometastic" src="{{URL::asset('storage/images/firststonelogog.png')}}" style="max-height: 80px;">
+        <img class="pull-left main-logo" alt="FirstStone" src="/storage/images/firststonelogog.png" style="max-height: 80px;">
         <div class="menu-button"><i class="fa fa-reorder"></i></div>
         <nav class="menu-container underscore-container menu-container-fade">
             <ul>
@@ -55,3 +58,4 @@
     </div><!-- .container -->
 </div><!-- .main-menu -->
 @include('modals.login')
+@include('modals.register')

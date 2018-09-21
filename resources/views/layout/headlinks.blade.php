@@ -5,10 +5,12 @@
     <![endif]-->
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="Aleš Trunda alestrunda.cz">
+    <meta name="author" content="Emmanuel Paul (Ewebs)">
     <meta name="robots" content="index, follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">    
-    
+
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+
     <link rel="icon" href="icon.png" type="image/png">
 
     <!--[if lt IE 9]>
@@ -27,7 +29,8 @@
     <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/stroll/stroll.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/owl-carousel/owl.carousel.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('/styles/animate.min.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('/styles/animate.min.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('/css/fontawesome.css') }}" type="text/css">
     <link id="main-stylesheet" rel="stylesheet" href="{{ asset('/styles/main.css') }}" type="text/css">
     
 	<title>FirstStone Real Estate Limited</title>
@@ -90,7 +93,6 @@
 		border: 1px #e1e1e1 solid;
 		border-left: none;
 	}
-	
 	.theme-setting {
 		width: 54px;
 		height: 54px;

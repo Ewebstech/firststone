@@ -126,6 +126,9 @@
         <script type="text/javascript" src="{{ asset('/js/jquery.stellar.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/js/jquery.inview.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/js/custom.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/fontawesome.js') }}"></script>
+    
+
         
         <script type="text/javascript">
             $(document).ready(function(e) {

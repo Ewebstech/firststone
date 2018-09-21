@@ -38,9 +38,14 @@ Route::get('/contact', function (){
     return view('contact');
 });
 
+$SiteRoutes = Route::prefix('site')->group(function () {
+    $this->post('/signup', 'UserController@regUser')->name('signup');
+});
+
 /**
  * Admin Routes
  */
+
 
 $AdminRoute = Route::prefix('f-admin')->group(function () {
     $this->get('', 'AdminController@index');

@@ -67,7 +67,7 @@ function submit_form(fid, page, contid, reload, cb, xdata) {
         var data = jsonObj.data;
         container.html(data);
         if (status == "success") {
-           //AutoRefresh(800);
+           AutoRefresh(3300);
         }
       }
     }

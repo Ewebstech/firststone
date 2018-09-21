@@ -5,10 +5,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" xml:lang="en-gb" class="no-js"> <!--<![endif]-->
 
 @include('layout.headlinks')
-
 <body>
-	
-
 	<div id="page-loader">
     	<div class="centered-columns">
         	<div class="centered-column">
@@ -53,13 +50,13 @@
                             <div class="icon-opening-wrapper">
                                 <div class="icon-opening-container">
                                     <div class="icon-opening"><i class="fa fa-phone"></i></div>
-                                    <div class="icon-opening-content">+234 800 000 0000</div>
+                                    <div class="icon-opening-content">+234 810 728 1873</div>
                                 </div>
                             </div>
                             <div class="icon-opening-wrapper">
                                 <div class="icon-opening-container">
                                     <div class="icon-opening"><i class="fa fa-mobile-phone text-big"></i></div>
-                                    <div class="icon-opening-content">+234 800 000 0000</div>
+                                    <div class="icon-opening-content">+234 812 358 4783</div>
                                 </div>
                             </div>
                             <div class="icon-opening-wrapper">

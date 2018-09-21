@@ -5,7 +5,7 @@
                 <a href="#"><i class="fa fa-envelope"></i> info@firststonersl.com</a>
             </span>
             <span class="site-top-item">
-                <i class="fa fa-phone"></i> +234 800 000 0000
+                <i class="fa fa-phone"></i> +234 810 728 1873, +234 812 358 4783
             </span>
             <span class="site-top-item">
                 &reg; <b>RC:</b> 1518397
@@ -13,7 +13,7 @@
         </div>
         <div class="pull-right">
             <div class="site-top-item">
-                <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user"></i> Log in</a>
+                <a href="#" data-toggle="modal" data-target="#"><i class="fa fa-user"></i> Log in</a>
             </div>
             <div class="site-top-item">
                 <a href="#" data-toggle="modal" data-target="#regModal"><i class="fa fa-pencil"></i> Sign Up</a>

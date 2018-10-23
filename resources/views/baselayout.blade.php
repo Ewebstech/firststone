@@ -183,6 +183,8 @@
         </div><!-- .bg-image -->
     </section>
     <div class="margin-30 visible-lg-block visible-md-block"></div>
+
+
     <section>
             <div class="section-content">
                 <div class="container">
@@ -191,6 +193,7 @@
                         <h4>See our recent investment listings availaible for sponsorships </h4>
                     </div>
                     <div class="row">
+                     @foreach($investments as $investment)
                         <div class="col-md-4 onscroll-animate">
                             <article>
                                 <div class="post-preview">
@@ -198,18 +201,18 @@
                                         <section>
                                             <div class="post-preview-img">
                                                 <div class="post-preview-img-inner">
-                                                    <img alt="post img" src="/storage/images/listings/4.jpg">
+                                                    <img alt="post img" src="{{ asset($investment->image_name) }}">
                                                 </div>
                                                 <div class="post-preview-label">Structure</div>
                                             </div> 
                                         </section>
                                     </a>
                                     <div class="post-preview-content">
-                                        <h2 class="post-preview-heading">45, Road 3, Garki, Abuja</h2>
-                                        <p>55 Plots of Land located in Garki, Abuja</p>
+                                        <h2 class="post-preview-heading">{{ $investment->address }}</h2>
+                                        <p>{{ $investment->address }}</p>
                                         <div class="post-preview-price-container">
                                             <a href="property_single.html" class="read-more-link-alt">View Details</a>
-                                            <p class="listing-price">&#8358 50,000,000</p>
+                                            <p class="listing-price">&#8358 {{ $investment->amount }}</p>
                                         </div>
                                         <div class="post-preview-detail">
                                             <a href="#">10500 Sq Ft</a> <span class="delimiter-inline-alt"></span> <a href="#">2 Acres</a> <span class="delimiter-inline-alt"></span> <a href="#">Near City</a> <span class="delimiter-inline-alt"></span> <a href="#">Dev Area</a>
@@ -218,73 +221,12 @@
                                 </div>
                             </article>
                         </div><!-- .col-md-4 -->
-                        <div class="col-md-4 onscroll-animate">
-                                <article>
-                                    <div class="post-preview">
-                                        <a href="property_single.html">
-                                            <section>
-                                                <div class="post-preview-img">
-                                                    <div class="post-preview-img-inner">
-                                                        <img alt="post img" src="/storage/images/listings/5.jpg">
-                                                    </div>
-                                                    <div class="post-preview-label">Land</div>
-                                                </div> 
-                                            </section>
-                                        </a>
-                                        <div class="post-preview-content">
-                                            <h2 class="post-preview-heading">45, Road 3, Garki, Abuja</h2>
-                                            <p>55 Plots of Land located in Garki, Abuja</p>
-                                            <div class="post-preview-price-container">
-                                                <a href="property_single.html" class="read-more-link-alt">View Details</a>
-                                                <p class="listing-price">&#8358 50,000,000</p>
-                                            </div>
-                                            <div class="post-preview-detail">
-                                                <a href="#">10500 Sq Ft</a> <span class="delimiter-inline-alt"></span> <a href="#">2 Acres</a> <span class="delimiter-inline-alt"></span> <a href="#">Near City</a> <span class="delimiter-inline-alt"></span> <a href="#">Dev Area</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div><!-- .col-md-4 -->
-                            <div class="col-md-4 onscroll-animate">
-                                    <article>
-                                        <div class="post-preview">
-                                            <a href="property_single.html">
-                                                <section>
-                                                    <div class="post-preview-img">
-                                                        <div class="post-preview-img-inner">
-                                                            <img alt="post img" src="/storage/images/listings/6.jpg">
-                                                        </div>
-                                                        <div class="post-preview-label">Structure</div>
-                                                    </div> 
-                                                </section>
-                                            </a>
-                                            <div class="post-preview-content">
-                                                <h2 class="post-preview-heading">45, Road 3, Garki, Abuja</h2>
-                                                <p>55 Plots of Land located in Garki, Abuja</p>
-                                                <div class="post-preview-price-container">
-                                                    <a href="property_single.html" class="read-more-link-alt">View Details</a>
-                                                    <p class="listing-price">&#8358 50,000,000</p>
-                                                </div>
-                                                <div class="post-preview-detail">
-                                                    <a href="#">10500 Sq Ft</a> <span class="delimiter-inline-alt"></span> <a href="#">2 Acres</a> <span class="delimiter-inline-alt"></span> <a href="#">Near City</a> <span class="delimiter-inline-alt"></span> <a href="#">Dev Area</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div><!-- .col-md-4 -->
+                     @endforeach
                     </div><!-- .row -->
-            
-                
-                    </div><!-- .row -->
+
                     <div class="text-center onscroll-animate">
                         <div class="pagination">
-                            <div class="pagination-item pagination-first"><a href="#">First</a></div>
-                            <div class="pagination-item"><a href="#">1</a></div>
-                            <div class="pagination-item active"><a href="#">2</a></div>
-                            <div class="pagination-item"><a href="#">3</a></div>
-                            <div class="pagination-item"><a href="#">4</a></div>
-                            <div class="pagination-item"><a href="#">5</a></div>
-                            <div class="pagination-item pagination-last"><a href="#">Last</a></div>
+                             {{ $investments->links() }}
                         </div>
                     </div>
                 </div><!-- .container -->

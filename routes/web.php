@@ -14,9 +14,7 @@ use App\Http\Controllers\AdminController;
 */
 
 //Home page
-Route::get('/', function (){
-    return view('baselayout');
-});
+Route::get('/', 'IndexController@index');
 
 // Blank Page
 Route::get('/blank', function (){

@@ -18,5 +18,9 @@ class DatabaseSeeder extends Seeder
             'content' => 'null',
             'remember_token' => str_random(10)
         ]);
+
+        $this->call([
+            PropertyTableSeeder::class,
+        ]);
     }
 }

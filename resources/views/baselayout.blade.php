@@ -106,6 +106,7 @@
         		</div>
                 
                 <div class="row">
+                  @foreach($properties as $property)
                 	<div class="col-md-4 onscroll-animate">
                     	<article>
                             <div class="post-preview">
@@ -113,18 +114,18 @@
                                     <section>
                                         <div class="post-preview-img">
                                             <div class="post-preview-img-inner">
-                                                <img alt="post img" src="/storage/images/listings/1.jpg">
+                                                <img alt="post img" src="{{ asset($property->image_name) }}">
                                             </div>
                                             <div class="post-preview-label">On Sale</div>
                                         </div> 
                                     </section>
                                 </a>
                                 <div class="post-preview-content">
-                                    <h2 class="post-preview-heading">25A, Road 5, Lekki Phase 3, Ikota</h2>
-                                    <p>This is a 5 bedroom, 1.5 bathroom, single family home. It is spacious and located in Lagos.</p>
+                                    <h2 class="post-preview-heading">{{ $property->title }}</h2>
+                                    <p>{{ $property->description }}.</p>
                                     <div class="post-preview-price-container">
                                         <a href="property_single.html" class="read-more-link-alt">View Details</a>
-                                        <p class="listing-price">&#8358 5,000,000</p>
+                                        <p class="listing-price">&#8358; {{ $property->amount }} </p>
                                     </div>
                                     <div class="post-preview-detail">
                                         <a href="#">2500 Sq Ft</a> <span class="delimiter-inline-alt"></span> <a href="#">4 Bedrooms</a> <span class="delimiter-inline-alt"></span> <a href="#">2 Bathrooms</a> <span class="delimiter-inline-alt"></span> <a href="#">1 Garage</a>
@@ -133,73 +134,14 @@
                             </div>
                         </article>
                     </div><!-- .col-md-4 -->
-                    <div class="col-md-4 onscroll-animate" data-delay="400">
-                    	<article>
-                            <div class="post-preview">
-                            	<a href="property_single.html">
-                                    <section>
-                                        <div class="post-preview-img">
-                                            <div class="post-preview-img-inner">
-                                                <img alt="post img" src="/storage/images/listings/2.jpg">
-                                            </div>
-                                            <div class="post-preview-label2">Closed</div>
-                                        </div>
-                                    </section>
-                                </a>
-                                <div class="post-preview-content">
-                                    <h2 class="post-preview-heading">62D, Holland Way, Ikeja, Lagos</h2>
-                                    <p>This is a 5 bedroom, 1.5 bathroom, single family home. It is located in Lagos</p>
-                                    <div class="post-preview-price-container">
-                                        <a href="property_single.html" class="read-more-link-alt">View Details</a>
-                                        <p class="listing-price">&#8358 4,500,000</p>
-                                    </div>
-                                    <div class="post-preview-detail">
-                                        <a href="#">2500 Sq Ft</a> <span class="delimiter-inline-alt"></span> <a href="#">4 Bedrooms</a> <span class="delimiter-inline-alt"></span> <a href="#">2 Bathrooms</a> <span class="delimiter-inline-alt"></span> <a href="#">1 Garage</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div><!-- .col-md-4 -->
-                    <div class="col-md-4 onscroll-animate" data-delay="600">
-                        <article>
-                            <div class="post-preview">
-                            	<a href="property_single.html">
-                                    <section>
-                                        <div class="post-preview-img">
-                                            <div class="post-preview-img-inner">
-                                                <img alt="post img" src="/storage/images/listings/3.jpg">
-                                            </div>
-                                            <div class="post-preview-label">For Sale</div>
-                                        </div>
-                                    </section>
-                                </a>
-                                <div class="post-preview-content">
-                                    <h2 class="post-preview-heading">664, Boston Avenue, Epe, Lagos</h2>
-                                    <p>This is a 5 bedroom, 1.5 bathroom, single family home. It is located Epe, Lagos</p>
-                                    <div class="post-preview-price-container">
-                                        <a href="property_single.html" class="read-more-link-alt">View Details</a>
-                                        <p class="listing-price">&#8358 7,000,000</p>
-                                    </div>
-                                    <div class="post-preview-detail">
-                                        <a href="#">2500 Sq Ft</a> <span class="delimiter-inline-alt"></span> <a href="#">4 Bedrooms</a> <span class="delimiter-inline-alt"></span> <a href="#">2 Bathrooms</a> <span class="delimiter-inline-alt"></span> <a href="#">1 Garage</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div><!-- .col-md-4 -->
+                  @endforeach  
+
                 </div><!-- .row -->
         
-            
                 </div><!-- .row -->
                 <div class="text-center onscroll-animate">
                     <div class="pagination">
-                        <div class="pagination-item pagination-first"><a href="#">First</a></div>
-                        <div class="pagination-item"><a href="#">1</a></div>
-                        <div class="pagination-item active"><a href="#">2</a></div>
-                        <div class="pagination-item"><a href="#">3</a></div>
-                        <div class="pagination-item"><a href="#">4</a></div>
-                        <div class="pagination-item"><a href="#">5</a></div>
-                        <div class="pagination-item pagination-last"><a href="#">Last</a></div>
+                         {{ $properties->links() }}
                     </div>
                 </div>
             </div><!-- .container -->

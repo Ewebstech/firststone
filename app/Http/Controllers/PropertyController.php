@@ -15,20 +15,23 @@ class PropertyController extends Controller
     }
 
     public function store(Request $request, ImageUploadController $uploadimage) {
-        //dd('jdjsdjsjs');
-        $image_path = "firststone/".'dj';
-        dd($image = $uploadimage->uploadImages($request, $image_path));
-        dd($request->all());
-        dd($this->validateRequest($request));
-        Project::create([
+       
+        $this->validateRequest($request);
+        
+        $image_path = date('ymhis').rand(0, 99999);
+        $image = $uploadimage->uploadImages($request, $image_path);
+     
+        Property::create([
             'investmenttype'=> $request->investmenttype,
             'title' => $request->title,
             'address' => $request->address,
             'amount' => $request->amount,
             'type' => $request->type,
             'description' => $request->description,
-            'image_name' => $image
+            'image_name' => $image['url']
         ]);
+
+        return back('success', 'Property successfully added to properties listing');
     }
 
     public function validateRequest($request) {

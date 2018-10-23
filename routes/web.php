@@ -53,16 +53,18 @@ $SiteRoutes = Route::prefix('site')->group(function () {
 $AdminRoute = Route::prefix('f-admin')->group(function () {
     $this->get('', 'AdminController@index');
 
+    //Routes for Properties
     $this->get('/add-property', 'PropertyController@create')->name('property.create');
     $this->post('/add-property', 'PropertyController@store')->name('property.store');
     
+    //Routes for Investments
+    $this->get('/add-investment', 'InvestmentController@create')->name('investment.create');
+    $this->post('/add-investment', 'InvestmentController@store')->name('investment.store');
 
     $this->post('/login', 'AdminController@checklogin')->name('login');
     $this->get('/dashboard', 'AdminController@successlogin')->name('dashboard');
     $this->get('/logout', 'AdminController@logout')->name('logout');
-    $this->get('/add-projects', function () {
-        return view('admin/addprojects');
-    })->name('add-p');
+    
     $this->post('/postdata', 'FormController@store')->name('createproject');
 });
 

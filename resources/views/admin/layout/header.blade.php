@@ -6,7 +6,7 @@
                 <a href="#a"><i class="fa fa-plus"></i> Projects</a> 
                 <ul> 
                     <li> 
-                        <a href="{{ route('add-p') }}"> <i class="fa fa-plus"></i>  Add Projects</a> 
+                        <a href="{{ route('investment.create') }}"> <i class="fa fa-plus"></i>  Add Investments</a> 
                         <a href="{{ route('property.create') }}"> <i class="fa fa-plus"></i>  Add Property</a> 
                     </li> 
                 

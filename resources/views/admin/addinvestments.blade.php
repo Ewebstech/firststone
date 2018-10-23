@@ -29,7 +29,7 @@
             <section>
                 <header class="container_12 clearfix">
                     <div class="grid_12">
-                        <h1>Add Projects</h1>
+                        <h1>Add Investment</h1>
                     </div>
                 </header>
                 <section class="container_6 clearfix">
@@ -38,19 +38,19 @@
                             <h2>Add to Project Listings for Sponsoring</h2>
                         </header>
                         <section>
-                            <form class="form has-validation" id="projectForm" enctype="multipart/form-data">
+                            <form action="{{ route('investment.store') }}" method="post" enctype="multipart/form-data">{{ @csrf_field() }}
                                     @csrf
                                 <p>
                                 <div class="clearfix">
-
+                                     @include('layout.flashmessages')
                                     <label for="form-name" class="form-label"> Select Investment<em>*</em><small>Investment type</small></label>
                                     &nbsp; &nbsp;
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="project[type]" id="project[type]" value="Land Investment">
+                                        <input class="form-check-input" type="radio" name="investmenttype" id="project[type]" value="Land Investment">
                                         <label class="form-check-label" for="inlineRadio1">Land Investment</label>
                                       </div>
                                       <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="project[type]" id="project[type]" value="Development Investment">
+                                        <input class="form-check-input" type="radio" name="investmenttype" id="project[type]" value="Development Investment">
                                         <label class="form-check-label" for="inlineRadio2">Development Investment</label>
                                       </div>
                                       <br /><br />
@@ -60,7 +60,7 @@
 
                                     <label for="form-email" class="form-label">Deal Size <em>*</em><small>E.g 2 plots of land at xx estate</small></label>
 
-                                    <div class="form-input"><input type="text" name="project[dealsize]" id="project[dealsize]" required="required" /></div>
+                                    <div class="form-input"><input type="text" name="project[dealsize]" id="dealsize"  /></div>
 
                                 </div>
 
@@ -68,28 +68,28 @@
 
                                     <label for="form-username" class="form-label">Deal Units <em>*</em><small>Can be Alphanumeric</small></label>
 
-                                    <div class="form-input"><input type="text" id="project[dealunit]" name="project[dealunit]" required="required" /></div>
+                                    <div class="form-input"><input type="text" id="project[dealunit]" name="dealunits" /></div>
 
                                 </div>
 
                                 <div class="clearfix">
 
                                     <label for="form-username" class="form-label">Amount in &#8358 <em>*</em><small>In Figures(Numeric)</label>
-                                    <div class="form-input"><input type="number" id="project[amount]" name="project[amount]" required="required" /></div>
+                                    <div class="form-input"><input type="number" id="project[amount]" name="amount" /></div>
 
                                 </div>
 
                                 <div class="clearfix">
 
                                     <label for="form-username" class="form-label">Mininum Yield Target <em>*</em><small>Min Returns (percentage)</label>
-                                    <div class="form-input"><input type="text" id="project[yieldtarget]" name="project[yieldtarget]" required="required" /></div>
+                                    <div class="form-input"><input type="text" id="project[yieldtarget]" name="minreturns" /></div>
 
                                 </div>
 
                                 <div class="clearfix">
 
                                     <label for="form-username" class="form-label">Property Address <em>*</em><small>In Figures(Numeric)</label>
-                                    <div class="form-input"><textarea id="project[address]" name="project[address]" required="required"></textarea></div>
+                                    <div class="form-input"><textarea id="project[address]" name="address"></textarea></div>
 
                                 </div>
                                 <div class="clearfix">
@@ -118,13 +118,6 @@
     </div>
 
   @include('admin.layout.footscripts')
-  
-<script>
-    $("#projectForm").submit(function(e){
-        
-        e.preventDefault();
-        submit_form_with_file("projectForm", "{{ route('createproject') }}", "data-msg");
-    })
-</script>
+
 </body>
 </html>

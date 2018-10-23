@@ -73,30 +73,61 @@
                         <div class="margin-40"></div>
                     </div><!-- .col-md-4 -->
                     <div class="col-md-5 onscroll-animate" data-delay="400">
-                    	<form class="form-contact-full" id="contact-form" action="#" method="post" data-name-not-set-msg="Name is required" data-message-not-set-msg="Message is required" data-email-not-set-msg="Email is required" data-ajax-fail-msg="Ajax could not set the request" data-success-msg="Email successfully sent.">
+
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+
+                    @if(Session::has('success'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">  x  </button>
+                            <strong> {!! session('success') !!} <br><br></strong>
+                        </div>
+                    @endif
+
+
+                    @if(Session::has('error'))
+                        <div class="alert alert-error alert-block">
+                            <button type="button" class="close" data-dismiss="alert">  x  </button>
+                            <strong> {!! session('error') !!} <br><br></strong>
+                        </div>
+                    @endif 
+
+                    	<form class="form-contact-full" id="contact-form" action="{{ route('contact.store') }}" method="post" data-name-not-set-msg="Name is required" data-message-not-set-msg="Message is required" data-email-not-set-msg="Email is required" data-ajax-fail-msg="Ajax could not set the request" data-success-msg="Email successfully sent.">{{ csrf_field() }}
                             <div class="row">
-                            
                                 <div class="col-xs-12">
-                                	Email/Username
-                                	<input type="text" name="email" placeholder="Your Email/Username">
+                                	Email
+                                	<input type="text" name="email" placeholder="Your Email">
                                 </div>
+
                             </div>
+
                             <div class="row">
                                 <div class="col-xs-12">
                                 	Subject
                                 	<input type="text" name="subject" placeholder="Subject">
                                 </div>
                             </div>
+
                             Message
                             <textarea name="message" placeholder="Inquiry or Comments"></textarea>
                             <p class="return-msg"></p>
+
                             <div class="text-center">
                                 <div class="form-contact-full-submit">
                                     <input type="submit" value="Send Message">
                                 </div>
                           	</div>
+
                         </form>
                     </div><!-- .col-md-4 -->
+
                     <div class="col-md-4 onscroll-animate" data-delay="400" >
                         <img src="/storage/images/mail_animation.gif" class="img-responsive" /> 
                     </div>

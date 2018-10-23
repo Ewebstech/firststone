@@ -33,10 +33,13 @@ Route::prefix('services')->group(function () {
         return view('dev-investments');
     });
 });
+
+
 //About Page
-Route::get('/contact', function (){
-    return view('contact');
-});
+Route::get('/contact', 'ContactController@index');
+//Post message
+Route::post('/contact', 'ContactController@store')->name('contact.store');
+
 
 $SiteRoutes = Route::prefix('site')->group(function () {
     $this->post('/signup', 'UserController@regUser')->name('signup');

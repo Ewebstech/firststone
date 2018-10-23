@@ -16,6 +16,7 @@
     </div>
 	<header id="header-section">
     	@include('layout.nav')
+        @include('layout.flashmessages')
     </header>
     
     @include('layout.slider')

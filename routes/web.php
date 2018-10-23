@@ -41,7 +41,7 @@ Route::prefix('services')->group(function () {
 Route::get('/contact', 'ContactController@index');
 //Post message
 Route::post('/contact', 'ContactController@store')->name('contact.store');
-
+Route::post('/subscribe-mail','MailController@store')->name('subscribemail');
 
 $SiteRoutes = Route::prefix('site')->group(function () {
     $this->post('/signup', 'UserController@regUser')->name('signup');
@@ -54,6 +54,11 @@ $SiteRoutes = Route::prefix('site')->group(function () {
 
 $AdminRoute = Route::prefix('f-admin')->group(function () {
     $this->get('', 'AdminController@index');
+
+    $this->get('/add-property', 'PropertyController@create')->name('property.create');
+    $this->post('/add-property', 'PropertyController@store')->name('property.store');
+    
+
     $this->post('/login', 'AdminController@checklogin')->name('login');
     $this->get('/dashboard', 'AdminController@successlogin')->name('dashboard');
     $this->get('/logout', 'AdminController@logout')->name('logout');

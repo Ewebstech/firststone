@@ -60,13 +60,14 @@
                             <div class="col-sm-6 footer-column onscroll-animate" data-delay="800">
                                 <h4>Newsletter</h4>
                                 <p style="color: rgba(255,255,255,0.7) !important">Subscribe for out newsletter, and we will keep you inform of new offers.</p>
-                                <form class="form-subscribe" id="rss-subscribe" action="#" method="post" data-email-not-set-msg="Email must be set" data-ajax-fail-msg="Ajax could not set the request" data-success-msg="Email successfully added">
-                                    <input type="text" name="email" placeholder="your email...">
+                                 <form class="form-subscribe" id="rss-subscribe" action="{{ route('subscribemail') }}" method="post" data-email-not-set-msg="Email must be set" data-ajax-fail-msg="Ajax could not set the request" data-success-msg="Email successfully added">
+                                    {{ @csrf_field() }}
+                                    <input type="email" name="email" placeholder="your email..." required>
                                     <div class="text-right">
                                         <input type="submit" value="Submit">
                                     </div>
                                     <p class="return-msg"></p>
-                                </form>
+                                 </form>
                             </div>
                         </div><!-- .row -->
                     </div><!-- .col-md-6 -->

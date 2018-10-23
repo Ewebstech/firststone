@@ -7,6 +7,7 @@
                 <ul> 
                     <li> 
                         <a href="{{ route('add-p') }}"> <i class="fa fa-plus"></i>  Add Projects</a> 
+                        <a href="{{ route('property.create') }}"> <i class="fa fa-plus"></i>  Add Property</a> 
                     </li> 
                 
                 </ul> 

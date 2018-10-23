@@ -13,9 +13,11 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+//Home page
 Route::get('/', function (){
     return view('baselayout');
 });
+
 // Blank Page
 Route::get('/blank', function (){
     return view('blank');
@@ -35,7 +37,7 @@ Route::prefix('services')->group(function () {
 });
 
 
-//About Page
+//Contact Page
 Route::get('/contact', 'ContactController@index');
 //Post message
 Route::post('/contact', 'ContactController@store')->name('contact.store');

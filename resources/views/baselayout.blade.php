@@ -103,6 +103,7 @@
         			<h1>Property Listings</h1>
                     <h4>See our recent property listings deals  </h4>
         		</div>
+                
                 <div class="row">
                 	<div class="col-md-4 onscroll-animate">
                     	<article>

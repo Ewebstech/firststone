@@ -22,6 +22,8 @@ class CreateInvestmentsTable extends Migration
             $table->string('minreturns');
             $table->string('address');
             $table->string('image_name');
+            $table->string('thumbnail_image');
+            $table->string('single_image');
             $table->timestamps();
         });
     }

@@ -31,9 +31,7 @@ class PropertyController extends Controller
         $this->validateRequest($request);
         
         $image_path = date('ymhis').rand(0, 99999);
-        $image = $uploadimage->uploadImages($request, $image_path, "properties", 370, 300);
-        //upload the single image size
-        //upload the thumbnail size
+        $image = $uploadimage->uploadImages($request, $image_path, "properties");
      
         Property::create([
             'investmenttype'=> $request->investmenttype,
@@ -42,7 +40,9 @@ class PropertyController extends Controller
             'amount' => $request->amount,
             'type' => $request->type,
             'description' => $request->description,
-            'image_name' => $image['url']
+            'image_name' => $image[2],
+            'thumbnail_image' => $image[1],
+            'single_image' => $image[0],
         ]);
 
         return back()->with('success', 'Property successfully added to properties listing');

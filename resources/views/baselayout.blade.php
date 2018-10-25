@@ -21,6 +21,7 @@
     
     @include('layout.slider')
     
+    @if($noOfPropeerties)
 	<section>
     	<div class="section-content">
         	<div class="container" style="color: #000 !important;">
@@ -86,7 +87,8 @@
                 </p>
            	</div><!-- .container -->
        	</div><!-- .section-content -->
-  	</section>
+      </section>
+    @endif  
     
 	<section id="citation-section" class="section-contrast">
     	<div class="bg-image bg-pattern bg-cover parallax-background">
@@ -110,7 +112,7 @@
                 	<div class="col-md-4 onscroll-animate">
                     	<article>
                             <div class="post-preview">
-                            	<a href="property_single.html">
+                            	<a href="{{ route('property-single', $property->id) }}">
                                     <section>
                                         <div class="post-preview-img">
                                             <div class="post-preview-img-inner">
@@ -184,6 +186,7 @@
     </section>
     <div class="margin-30 visible-lg-block visible-md-block"></div>
 
+@if($noOfInvestments)
 
     <section>
             <div class="section-content">
@@ -197,7 +200,7 @@
                         <div class="col-md-4 onscroll-animate">
                             <article>
                                 <div class="post-preview">
-                                    <a href="property_single.html">
+                                    <a href="{{ route('investment-single', $investment->id) }}">
                                         <section>
                                             <div class="post-preview-img">
                                                 <div class="post-preview-img-inner">
@@ -232,7 +235,9 @@
                 </div><!-- .container -->
             </div><!-- .section-content -->
         </section>
-   
+
+   @endif
+
 	
     @include('layout.footer')
 </body>

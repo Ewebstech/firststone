@@ -52,15 +52,9 @@
                                 
                                 <ul class="slides">
 
-                                @php
-                                    $propertyName = $propertyDetails->image_name;
-                                    $explode = explode('/', $propertyName);
-                                    $resizedUrl = $explode[0]."/".$explode[1]."/".$explode[2]."/".$explode[3]."/".$explode[4]."/".$explode[5]."/w_870,h_570/".$explode[6]."/".$explode[7]."/".$explode[8];
-                                @endphp
-                                    
                                     <li>
                                         <div class="preview-single">
-                                            <a href="images/listings/big.jpg" data-lightbox="post1-img"><img alt="slide1" src="{{ $resizedUrl }}"></a>
+                                            <a href="images/listings/big.jpg" data-lightbox="post1-img"><img alt="slide1" src="{{ $propert->single_image }}"></a>
                                             <div class="preview-single-labels">
                                                 <div class="clearfix">
                                                     <div class="label-black pull-left">
@@ -133,15 +127,11 @@
                                         <h1>Other Properties</h1>
                                     </div>
                                      @foreach($otherProperties as $properties)
-                                        @php
-                                            $propertyName = $properties->image_name;
-                                            $explode = explode('/', $propertyName);
-                                            $resizedThumbnail = $explode[0]."/".$explode[1]."/".$explode[2]."/".$explode[3]."/".$explode[4]."/".$explode[5]."/w_166,h_106/".$explode[6]."/".$explode[7]."/".$explode[7]."/".$explode[8];
-                                        @endphp
+                                       
                                         <article class="onscroll-animate" data-animation="fadeInRight">
                                             <div class="profile-small">
                                                 <div class="profile-small-photo">
-                                                    <a href="{{ route('property-single', $propertyDetails->id ) }}"><img alt="avatar 1" src="{{ $resizedThumbnail }}"></a>
+                                                    <a href="{{ route('property-single', $propertyDetails->id ) }}"><img alt="avatar 1" src="{{ $properties->thumbnail_image }}"></a>
                                                 </div>
                                                 <div class="profile-small-content">
                                                     <h5>{{ $properties->title }}</h5>

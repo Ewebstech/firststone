@@ -37,7 +37,9 @@ class InvestmentController extends Controller
             'amount' => $request->amount,
             'minreturns' => $request->minreturns,
             'address' => $request->address,
-            'image_name' => $image['url']
+            'image_name' => $image[2],
+            'thumbnail_image' => $image[1],
+            'single_image' => $image[0],
         ]);
 
         return redirect('mdmdmdd')->with('success', 'Investment successfully added to investments listing');

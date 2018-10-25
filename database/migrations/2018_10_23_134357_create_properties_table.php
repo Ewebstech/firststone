@@ -22,6 +22,8 @@ class CreatePropertiesTable extends Migration
             $table->string('type');
             $table->string('description');
             $table->string('image_name');
+            $table->string('thumbnail_image');
+            $table->string('single_image');
             $table->timestamps();
         });
     }

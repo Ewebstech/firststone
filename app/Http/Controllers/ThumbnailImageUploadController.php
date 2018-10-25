@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use JD\Cloudder\Facades\Cloudder;
 
-class ImageUploadController extends Controller
+class ThumbnailImageUploadController extends Controller
 {
     public function uploadImages(Request $request, $image_path, $folder, $width, $height)
     {   

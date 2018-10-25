@@ -10,8 +10,11 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller
 {
     public function index() {
+        //paginate all  that are for sale
         $properties = Property::paginate(3);
+        //paginate all that are for sale
         $investments = Investment::paginate(3);
+        
         return view('baselayout', compact('properties', 'investments'));
     }
     

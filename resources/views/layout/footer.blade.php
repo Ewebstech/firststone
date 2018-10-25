@@ -21,7 +21,7 @@
                             <div class="col-sm-6 footer-column onscroll-animate">
                                 <h4><img alt="Hometastic" src="/storage/images/firststonelogog.png" style="max-height: 40px;"></h4>
                                 <p style="color: rgba(255,255,255,0.7) !important">Our mission is to use our technology platform to reach an increasing number of people with increasing quantity of real estate deals that are satisfactorily beneficial.</p>
-                                <a href="#" class="read-more-link-alt">Read more</a> 
+                                <a href="{{ route('about') }}" class="read-more-link-alt">Read more</a> 
                             </div>
                             <div class="col-sm-6 footer-column onscroll-animate" data-delay="400">
                                 <h4>Site Links</h4>
@@ -60,14 +60,14 @@
                             <div class="col-sm-6 footer-column onscroll-animate" data-delay="800">
                                 <h4>Newsletter</h4>
                                 <p style="color: rgba(255,255,255,0.7) !important">Subscribe for out newsletter, and we will keep you inform of new offers.</p>
-                                 <form class="form-subscribe" id="rss-subscribe" action="{{ route('subscribemail') }}" method="post" data-email-not-set-msg="Email must be set" data-ajax-fail-msg="Ajax could not set the request" data-success-msg="Email successfully added">
-                                    {{ @csrf_field() }}
-                                    <input type="email" name="email" placeholder="your email..." required>
-                                    <div class="text-right">
-                                        <input type="submit" value="Submit">
-                                    </div>
-                                    <p class="return-msg"></p>
-                                 </form>
+                                <form class="form-subscribe" id="rss-subscribe" action="{{ route('subscribemail') }}" method="post" data-email-not-set-msg="Email must be set" data-ajax-fail-msg="Ajax could not set the request" data-success-msg="Email successfully added">
+                                {{ @csrf_field() }}
+                                <input type="text" name="email" placeholder="your email..." required>
+                                <div class="text-right">
+                                	<input type="submit" value="Submit">
+                                </div>
+                                <p class="return-msg"></p>
+                            </form>
                             </div>
                         </div><!-- .row -->
                     </div><!-- .col-md-6 -->
@@ -80,9 +80,9 @@
                         <div class="underscore-container">
                         <ul>
                             <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="{{ route('about') }}">About</a></li>
                             
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{{ route('contact') }}">Contact</a></li>
                           
                         <div class="underscore"><div class="underscore-inner"></div></div>
                         </div>
@@ -120,6 +120,7 @@
         </footer>
     
         <script type="text/javascript" src="{{ URL::asset('/js/jquery-1.11.2.min.js') }}"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
         <script type="text/javascript" src="{{ asset('/bootstrap/js/bootstrap.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/owl-carousel/owl.carousel.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/stroll/stroll.min.js') }}"></script>
@@ -128,6 +129,8 @@
         <script type="text/javascript" src="{{ asset('/js/jquery.inview.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/js/custom.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/js/fontawesome.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('flexslider/jquery.flexslider-min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('lightbox/js/lightbox.min.js') }}"></script>
     
 
         

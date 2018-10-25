@@ -14,12 +14,26 @@ class PropertyController extends Controller
         return view('admin/addproperty');
     }
 
+    public function showPropertySinglePage($id) {
+        $propertyDetails = Property::find($id);
+        $otherProperties = Property::where('id', '!=', $id)->limit(3)->get();
+        return view('property-single', compact('propertyDetails', 'otherProperties'));
+    }
+
+    public function showPropertyListing() {
+        $propertyDetails = Property::paginate(6);
+        return view('property-listing', compact('propertyDetails'));
+    }
+
+    
     public function store(Request $request, ImageUploadController $uploadimage) {
        
         $this->validateRequest($request);
         
         $image_path = date('ymhis').rand(0, 99999);
-        $image = $uploadimage->uploadImages($request, $image_path);
+        $image = $uploadimage->uploadImages($request, $image_path, "properties", 370, 300);
+        //upload the single image size
+        //upload the thumbnail size
      
         Property::create([
             'investmenttype'=> $request->investmenttype,
@@ -31,8 +45,9 @@ class PropertyController extends Controller
             'image_name' => $image['url']
         ]);
 
-        return back('success', 'Property successfully added to properties listing');
+        return back()->with('success', 'Property successfully added to properties listing');
     }
+
 
     public function validateRequest($request) {
         return Validator::make($request->all(), [

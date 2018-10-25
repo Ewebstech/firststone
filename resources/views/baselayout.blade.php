@@ -114,7 +114,7 @@
                                     <section>
                                         <div class="post-preview-img">
                                             <div class="post-preview-img-inner">
-                                                <img alt="post img" src="{{ asset($property->image_name) }}">
+                                                <img alt="post img" src="{{ $property->image_name }}">
                                             </div>
                                             <div class="post-preview-label">On Sale</div>
                                         </div> 
@@ -124,11 +124,11 @@
                                     <h2 class="post-preview-heading">{{ $property->title }}</h2>
                                     <p>{{ $property->description }}.</p>
                                     <div class="post-preview-price-container">
-                                        <a href="property_single.html" class="read-more-link-alt">View Details</a>
+                                        <a href="{{ route('property-single', $property->id) }}" class="read-more-link-alt">View Details</a>
                                         <p class="listing-price">&#8358; {{ $property->amount }} </p>
                                     </div>
                                     <div class="post-preview-detail">
-                                        <a href="#">2500 Sq Ft</a> <span class="delimiter-inline-alt"></span> <a href="#">4 Bedrooms</a> <span class="delimiter-inline-alt"></span> <a href="#">2 Bathrooms</a> <span class="delimiter-inline-alt"></span> <a href="#">1 Garage</a>
+                                        <a href="#">2 Percent</a> <span class="delimit er-inline-alt"></span> <a href="#">Per Annum</a>
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@
                             </div>
                             <p></p>
                     		<p class="text-right">
-                                    <h1><img alt="Hometastic" src="/storage/images/firststonelogog.png" style="max-height: 120px;"></h1>
+                                    <h1><img alt="Hometastic" src="{{ asset('/storage/images/firststonelogog.png') }}" style="max-height: 120px;"></h1>
                             	<a href="#" class="black-box black-box-apple">
                                 	<span class="small">Download on the</span><br>
 									<strong>App Store</strong>
@@ -201,7 +201,7 @@
                                         <section>
                                             <div class="post-preview-img">
                                                 <div class="post-preview-img-inner">
-                                                    <img alt="post img" src="{{ asset($investment->image_name) }}">
+                                                    <img alt="post img" src="{{ $investment->image_name }}">
                                                 </div>
                                                 <div class="post-preview-label">Structure</div>
                                             </div> 
@@ -211,11 +211,11 @@
                                         <h2 class="post-preview-heading">{{ $investment->address }}</h2>
                                         <p>{{ $investment->address }}</p>
                                         <div class="post-preview-price-container">
-                                            <a href="property_single.html" class="read-more-link-alt">View Details</a>
+                                            <a href="{{ route('investment-single', $investment->id) }}" class="read-more-link-alt">View Details</a>
                                             <p class="listing-price">&#8358 {{ $investment->amount }}</p>
                                         </div>
                                         <div class="post-preview-detail">
-                                            <a href="#">10500 Sq Ft</a> <span class="delimiter-inline-alt"></span> <a href="#">2 Acres</a> <span class="delimiter-inline-alt"></span> <a href="#">Near City</a> <span class="delimiter-inline-alt"></span> <a href="#">Dev Area</a>
+                                          <a href="#">2 Percent</a> <span class="delimit er-inline-alt"></span> <a href="#">Per Annum</a>
                                         </div>
                                     </div>
                                 </div>

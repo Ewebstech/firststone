@@ -103,7 +103,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                 	Email
-                                	<input type="text" name="email" placeholder="Your Email">
+                                	<input type="text" name="email" placeholder="Your Email" required>
                                 </div>
 
                             </div>
@@ -111,12 +111,12 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                 	Subject
-                                	<input type="text" name="subject" placeholder="Subject">
+                                	<input type="text" name="subject" placeholder="Subject" required>
                                 </div>
                             </div>
 
                             Message
-                            <textarea name="message" placeholder="Inquiry or Comments"></textarea>
+                            <textarea name="message" placeholder="Inquiry or Comments" required></textarea>
                             <p class="return-msg"></p>
 
                             <div class="text-center">

@@ -8,8 +8,8 @@ class Investment extends Model
 {
     protected $guarded = [];
 
-    public function getImageNameAttribute($value)
-    {
-        return 'uploads/investment/'.$value;
-    }
+    // public function getImageNameAttribute($value)
+    // {
+    //     return 'uploads/investment/'.$value;
+    // }
 }

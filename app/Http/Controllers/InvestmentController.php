@@ -13,6 +13,16 @@ class InvestmentController extends Controller
         return view('admin/addinvestments');
     }
 
+    public function showInvestmentSinglePage($id) {
+        $investmentDetails = Investment::find($id);
+        return view('investment-single', compact('investmentDetails'));
+    }
+
+    public function showInvestmentListing() {
+        $investmentDetails = Investment::paginate(6);
+        return view('investment-listing', compact('investmentDetails'));
+    }
+
     public function store(Request $request) {
         
         $this->validateRequest($request);
@@ -30,7 +40,8 @@ class InvestmentController extends Controller
             'image_name' => $image['url']
         ]);
 
-        return back('success', 'Investment successfully added to investments listing');
+        return redirect('mdmdmdd')->with('success', 'Investment successfully added to investments listing');
+        //return back()->with('success', 'Event deleted successfully');
     }
 
     public function validateRequest($request) {

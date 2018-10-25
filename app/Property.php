@@ -8,8 +8,8 @@ class Property extends Model
 {
     protected $guarded = [];
 
-    public function getImageNameAttribute($value)
-    {
-        return 'uploads/property/'.$value;
-    }
+    // public function getImageNameAttribute($value)
+    // {
+    //     return 'uploads/property/'.$value;
+    // }
 }

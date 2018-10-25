@@ -13,17 +13,26 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-//Home page
-Route::get('/', 'IndexController@index');
-
 // Blank Page
 Route::get('/blank', function (){
     return view('blank');
 });
+//Home page
+Route::get('/', 'IndexController@index');
 //About Page
 Route::get('/about', function (){
     return view('about');
-});
+})->name('about');
+//Contact Page
+Route::get('/contact', 'ContactController@index')->name('contact');
+
+//Properties routes
+Route::get('/property-single/{id}', 'PropertyController@showPropertySinglePage')->name('property-single');
+Route::get('/property-listing', 'PropertyController@showPropertyListing')->name('property-listing');
+
+//Investments routes
+Route::get('/investment-single/{id}', 'InvestmentController@showInvestmentSinglePage')->name('investment-single');
+Route::get('/investment-listing', 'InvestmentController@showInvestmentListing')->name('investment-listing');
 
 Route::prefix('services')->group(function () {
     $this->get('/land', function () {
@@ -35,8 +44,6 @@ Route::prefix('services')->group(function () {
 });
 
 
-//Contact Page
-Route::get('/contact', 'ContactController@index');
 //Post message
 Route::post('/contact', 'ContactController@store')->name('contact.store');
 Route::post('/subscribe-mail','MailController@store')->name('subscribemail');

@@ -28,9 +28,12 @@
     
     <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/stroll/stroll.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('/owl-carousel/owl.carousel.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('/owl-carousel/owl.carousel.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('flexslider/flexslider.min.css') }}" type="text/css">
 	<link rel="stylesheet" href="{{ asset('/styles/animate.min.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('lightbox/css/lightbox.css') }}" type="text/css">
 	<link rel="stylesheet" href="{{ asset('/css/fontawesome.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('styles/animate.min.css') }}" type="text/css">
     <link id="main-stylesheet" rel="stylesheet" href="{{ asset('/styles/main.css') }}" type="text/css">
     
 	<title>FirstStone Real Estate Limited</title>

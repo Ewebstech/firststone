@@ -20,7 +20,7 @@ class CreatePropertiesTable extends Migration
             $table->string('address');
             $table->string('amount');
             $table->string('type');
-            $table->string('description');
+            $table->text('description');
             $table->string('image_name');
             $table->string('thumbnail_image');
             $table->string('single_image');

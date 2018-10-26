@@ -124,7 +124,7 @@
                                 </a>
                                 <div class="post-preview-content">
                                     <h2 class="post-preview-heading">{{ $property->title }}</h2>
-                                    <p>{{ $property->description }}.</p>
+                                    <p>{{ str_limit($property->description, 200) }}.</p>
                                     <div class="post-preview-price-container">
                                         <a href="{{ route('property-single', $property->id) }}" class="read-more-link-alt">View Details</a>
                                         <p class="listing-price">&#8358; {{ $property->amount }} </p>

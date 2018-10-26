@@ -54,7 +54,7 @@
 
                                     <li>
                                         <div class="preview-single">
-                                            <a href="images/listings/big.jpg" data-lightbox="post1-img"><img alt="slide1" src="{{ $propert->single_image }}"></a>
+                                            <a href="images/listings/big.jpg" data-lightbox="post1-img"><img alt="slide1" src="{{ $propertyDetails->single_image }}"></a>
                                             <div class="preview-single-labels">
                                                 <div class="clearfix">
                                                     <div class="label-black pull-left">

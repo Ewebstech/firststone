@@ -22,7 +22,7 @@ class CreatePropertiesTable extends Migration
             $table->string('type');
             $table->text('description');
             $table->string('image_name');
-            $table->string('thumbnail_image');
+            $table->string('thumbnail_image')->nullable();
             $table->string('single_image');
             $table->timestamps();
         });

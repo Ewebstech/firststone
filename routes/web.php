@@ -17,6 +17,11 @@ use App\Http\Controllers\AdminController;
 Route::get('/blank', function (){
     return view('blank');
 });
+
+Route::get('/testmail', function (){
+    return view('emails/template');
+});
+
 //Home page
 Route::get('/', 'IndexController@index');
 //About Page
@@ -77,5 +82,7 @@ $AdminRoute = Route::prefix('f-admin')->group(function () {
 
 //$SiteRoute = Route::
 
+$MembersRoute = Route::prefix('u-accounts')->group(function () {
+    $this->get('', 'MembersController@loginPage');
 
-
+});

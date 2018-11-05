@@ -15,6 +15,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        
+        $app_logo = env('LOGO_URL','');
+        view()->share('appLogo', $app_logo);
     }
 
     /**

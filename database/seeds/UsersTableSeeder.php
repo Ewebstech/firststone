@@ -2,6 +2,7 @@
 
 use App\User;
 use Illuminate\Database\Seeder;
+use Faker\Factory;
 
 class UsersTableSeeder extends Seeder
 {
@@ -12,24 +13,34 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $users = [
-            [
-                'username' => 'admin', 
+        // Let's clear the users table first
+        User::truncate();
+
+        $faker = \Faker\Factory::create();
+
+        $password = Hash::make('password'); 
+
+        User::create([
+                'username' => 'admin',
                 'email' => 'admin@admin.com', 
+                'role' => 'admin',
                 'content' => 'null', 
-                'password' => bcrypt('xxxxxx'),
-            ],
+                'avatar' =>  $faker->imageUrl,
+                'remember_token' => str_random(10),
+                'password' => $password
+       ]);
 
-            [
-                'username' => 'user', 
-                'email' => 'user@user.com', 
-                'content' => 'null', 
-                'password' => bcrypt('xxxxxx'),
-            ]
-        ];
-
-        foreach($users as $user) {
-            User::create($user);
+        for($i = 0; $i <= 3; $i++){
+            User::create([
+                    'username' => $faker->username,
+                    'email' => $faker->unique()->safeEmail, 
+                    'role' => 'member',
+                    'content' => 'null',
+                    'avatar' =>  $faker->imageUrl,
+                    'remember_token' => str_random(10),
+                    'password' => $password
+            ]);
         }
+        
     }
 }

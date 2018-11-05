@@ -48,7 +48,7 @@ function submit_form(fid, page, contid, reload, cb, xdata) {
   }
   var container = $("#" + contid);
   container.html(
-    '<h6 class="text-center" ><img src="/storage/admin/images/ajax-loader-big-000000.gif" width="20px" /> <br/> Please Wait</h6>'
+    '<h6 class="text-center" ><img src="/storage/admin/images/ajax-loader-big-000000.gif" width="20px" style="margin-bottom: 7px;" /> <br/> Request Processing</h6>'
   );
   xmlHttp.open("POST", page);
   xmlHttp.onreadystatechange = function () {
